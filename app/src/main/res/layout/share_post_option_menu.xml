@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="30dp">
+
+    <TextView
+        android:id="@+id/tvRepost"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:drawablePadding="@dimen/_8sdp"
+        android:text="@string/repost"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_share"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvQuotePost"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawablePadding="@dimen/_8sdp"
+        android:text="@string/quote_post"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_edit"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvRepost" />
+
+    <TextView
+        android:id="@+id/tvCopyLink"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawablePadding="@dimen/_8sdp"
+        android:text="@string/copy_link"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:drawableStartCompat="@drawable/ic_copy_link"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvQuotePost" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

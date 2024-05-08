@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewClickListener"
+            type="com.databridge.mybridge.ui.appintro.viewmodel.AppintroViewModel.ViewClickHandler" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pagerProductInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:nestedScrollingEnabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ci_animator="@animator/scale_with_alpha"
+                    app:ci_drawable="@drawable/slider_select"
+                    app:ci_drawable_unselected="@drawable/slider_unselect"
+                    app:ci_gravity="center"
+                    app:ci_height="@dimen/dp8"
+                    app:ci_orientation="horizontal"
+                    app:ci_width="@dimen/dp8" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btn_get_started"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    tools:visibility="visible"
+                    style="@style/Text_White_16_Inter_Regular"
+                    android:background="@drawable/bg_btn"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{(v)->viewClickListener.onNextClick(v)}"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/get_started" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
+
+

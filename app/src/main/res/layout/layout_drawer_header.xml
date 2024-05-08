@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/profile_frame"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvImageName"
+        style="@style/Text_blue_16_Inter_Bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+        app:layout_constraintEnd_toEndOf="@id/imgProfile"
+        app:layout_constraintStart_toStartOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="@id/imgProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        tools:text="SG" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/tvDesignation"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="@id/imgProfile"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvDesignation"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:maxLines="2"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <View
+        android:id="@+id/viewProfile"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_divider"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgProfile,viewProfile, tvDesignation, tvName, btnLogout" />
+
+    <TextView
+        android:id="@+id/tvNavigationTitle"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:text="@string/new_to_my_bridge"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNavigationSubtitle"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="@string/sign_up_now_to_get"
+        android:textColor="@color/text_grey"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvNavigationTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCreateAccount"
+        style="@style/Text_White_16_Inter_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_login_btn"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="@string/create_account"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvNavigationSubtitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnLogin"
+        style="@style/Text_White_16_Inter_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bg_border_corner_grey"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="@string/log_in"
+        android:textAlignment="center"
+        android:textColor="@color/text_blue"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/btnCreateAccount" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvNavigationTitle,tvNavigationSubtitle,btnCreateAccount,btnLogin" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="btnLogin,viewProfile" />
+
+    <ImageView
+        android:id="@+id/imgNavPosts"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_round_grey"
+        android:contentDescription="@null"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_post"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/barrierNavigation"
+        app:tint="@color/text_grey" />
+
+    <TextView
+        android:id="@+id/tvNavPosts"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/posts"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgNavPosts"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imgNavPosts"
+        app:layout_constraintTop_toTopOf="@id/imgNavPosts" />
+
+    <ImageView
+        android:id="@+id/imgNavPeople"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_round_grey"
+        android:contentDescription="@null"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_people"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imgNavPosts"
+        app:tint="@color/text_grey" />
+
+    <TextView
+        android:id="@+id/tvNavPeople"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/people"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgNavPeople"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imgNavPeople"
+        app:layout_constraintTop_toTopOf="@id/imgNavPeople" />
+
+    <ImageView
+        android:id="@+id/imgNavJobs"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_round_grey"
+        android:contentDescription="@null"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_job"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imgNavPeople"
+        app:tint="@color/text_grey" />
+
+    <TextView
+        android:id="@+id/tvNavJobs"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/jobs"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgNavJobs"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imgNavJobs"
+        app:layout_constraintTop_toTopOf="@id/imgNavJobs" />
+
+    <ImageView
+        android:id="@+id/imgNavPages"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_round_grey"
+        android:contentDescription="@null"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_page"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imgNavJobs"
+        app:tint="@color/text_grey" />
+
+    <TextView
+        android:id="@+id/tvNavPages"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/pages"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgNavPages"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imgNavPages"
+        app:layout_constraintTop_toTopOf="@id/imgNavPages" />
+
+    <ImageView
+        android:id="@+id/imgNavEvents"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_round_grey"
+        android:contentDescription="@null"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imgNavPages"
+        app:tint="@color/text_grey" />
+
+    <TextView
+        android:id="@+id/tvNavEvents"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/events"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgNavEvents"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imgNavEvents"
+        app:layout_constraintTop_toTopOf="@id/imgNavEvents" />
+
+    <ImageView
+        android:id="@+id/imgNavTeam"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_round_grey"
+        android:contentDescription="@null"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_team"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imgNavEvents"
+        app:tint="@color/text_grey" />
+
+    <TextView
+        android:id="@+id/tvNavTeam"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/team"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgNavTeam"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imgNavTeam"
+        app:layout_constraintTop_toTopOf="@id/imgNavTeam" />
+
+    <ImageView
+        android:id="@+id/imgNavArticle"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_round_grey"
+        android:contentDescription="@null"
+        android:padding="@dimen/_6sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_article"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/imgNavTeam"
+        app:tint="@color/text_grey" />
+
+    <TextView
+        android:id="@+id/tvNavArticle"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/article"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgNavArticle"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toEndOf="@+id/imgNavArticle"
+        app:layout_constraintTop_toTopOf="@id/imgNavArticle" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnLogout"
+        style="@style/Text_White_16_Inter_Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bg_border_corner_grey"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="@string/logout"
+        android:textAlignment="center"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="@color/text_blue"
+       app:layout_constraintTop_toBottomOf="@+id/imgNavArticle"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

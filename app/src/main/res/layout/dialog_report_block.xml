@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_corner">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/block_report_title"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/please_select_a_problem"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/block_report_subtitle"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription">
+
+        <RadioButton
+            android:id="@+id/rbPretending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/pretending_to_be_someone"
+            android:textColor="@color/text_grey"
+            android:theme="@style/checkBoxStyle" />
+
+        <RadioButton
+            android:id="@+id/rbFakeAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fake_Account"
+            android:textColor="@color/text_grey"
+            android:theme="@style/checkBoxStyle" />
+
+        <RadioButton
+            android:id="@+id/rbFakeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fake_name"
+            android:textColor="@color/text_grey"
+            android:theme="@style/checkBoxStyle" />
+
+        <RadioButton
+            android:id="@+id/rbPosting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/posting_inappropriate_things"
+            android:textColor="@color/text_grey"
+            android:theme="@style/checkBoxStyle" />
+
+        <RadioButton
+            android:id="@+id/rbHarasement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/harassment_or_bullying"
+            android:textColor="@color/text_grey"
+            android:theme="@style/checkBoxStyle" />
+
+        <RadioButton
+            android:id="@+id/rbWantHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i_want_to_help"
+            android:textColor="@color/text_grey"
+            android:theme="@style/checkBoxStyle" />
+
+    </RadioGroup>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/report"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="@id/guideVerticalRight"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textColor="@color/text_grey"
+        app:layout_constraintEnd_toStartOf="@id/btnReport"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,293 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--    <data>-->
+
+    <!--        <import type="android.view.View" />-->
+
+    <!--        <variable-->
+    <!--            name="isLoading"-->
+    <!--            type="java.lang.Boolean" />-->
+
+    <!--        <variable-->
+    <!--            name="viewClickHandler"-->
+    <!--            type="com.databridge.mybridge.ui.login.login.viewmodel.LoginViewModel.ViewClickHandler" />-->
+    <!--    </data>-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    app:srcCompat="@drawable/app_icon" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/achieve_mor"
+                        style="@style/Text_grey_28_Inter_Bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_in" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text_grey_16_Inter_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="@string/email" />
+
+                    <!--                android:afterTextChanged="@{(editable)->viewClickHandler.afterEmailTextChanged(editable)}"-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etEmail"
+                        style="@style/edt_text_black_12_Inter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/squere_edittext"
+                        android:hint="@string/e_mail"
+                        android:inputType="textEmailAddress" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEmailError"
+                        style="@style/signin_error_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="center"
+                        android:text="@string/please_enter_a_valid_e_mail"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Text_grey_16_Inter_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="@string/password" />
+
+                    <!--                android:afterTextChanged="@{(editable)->viewClickHandler.afterPasswordTextChanged(editable)}"-->
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPassword"
+                        style="@style/edt_text_black_12_Inter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/squere_edittext"
+                        android:hint="@string/password"
+                        android:inputType="textPassword" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPasswordError"
+                        style="@style/signin_error_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="center"
+                        android:text="@string/please_enter_a_valid_e_mail"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <!--                android:onClick="@{(v)-> viewClickHandler.onLogin(v)}"-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnLogin"
+                        style="@style/Text_White_16_Inter_Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/bg_login_btn"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/sign_in"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+
+                        <!--                    android:button="@drawable/squre_checkbox_selector"-->
+                        <!--                    android:button="@drawable/squre_checkbox_selector"-->
+                        <!--                    android:button="@drawable/custom_checkbox"-->
+                        <CheckBox
+                            android:visibility="gone"
+                            android:id="@+id/checkRemember"
+                            style="@style/Text_grey_16_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:checked="false"
+                            android:theme="@style/checkBoxStyle"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:text="@string/remember_me" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1" />
+
+                        <!--                    android:onClick="@{(v)-> viewClickHandler.onForgotPassword()}"-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvForgotPass"
+                            style="@style/Text_White_16_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/Password_forgot"
+                            android:textColor="@color/clr_btn" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Text_grey_16_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/account_dont" />
+
+                        <!--                    android:onClick="@{(v)-> viewClickHandler.onRegister()}"-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSignup"
+                            style="@style/Text_White_16_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/sign_up"
+                            android:textColor="@color/clr_btn" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:background="@color/clr_txt" />
+
+                        <TextView
+                            android:id="@+id/txt_or"
+                            style="@style/Text_grey_18_Inter_Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:text="@string/or" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:background="@color/clr_txt" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLoginWithGoogle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/bg_social_btn"
+                        android:gravity="center">
+
+                        <!--                    android:onClick="@{(v)-> viewClickHandler.onLogin(v)}"-->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/btnLoginGoogle"
+                            style="@style/Text_grey_16_Inter_Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/img_google"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/sign_in_with_google"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"/>
+
+                    <include
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        layout="@layout/login_bottom_button"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/pbLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

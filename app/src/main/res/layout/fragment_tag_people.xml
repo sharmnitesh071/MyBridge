@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".ui.createpost.TagPeopleFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/tag_topbar" />
+
+        <EditText
+            android:id="@+id/et_Search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/top"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/ic_editcontainer"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Search"
+            android:maxEms="1"
+            android:maxLines="1"
+            android:textColorHint="#C4C4C4" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Tag"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_Search" />
+
+
+        <TextView
+            android:id="@+id/demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_Tag"
+            android:text="to implement recyclerview on for demo check xml" />
+
+
+        <RelativeLayout
+            android:id="@+id/demo_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/demo"
+            android:layout_margin="@dimen/_5sdp">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgProfilePic"
+                style="@style/Circle_Shape"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:contentDescription="@null"
+                android:src="@drawable/profile_frame" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/imgProfilePic"
+                android:fontFamily="@font/inter_bold"
+                android:text="Rahul Kumar"
+                android:textSize="@dimen/_15ssp" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/demo_tag"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/ic_createpostbackgroundrectangle">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_Post"
+                style="@style/Circle_Shape"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:contentDescription="@null"
+                android:src="@drawable/profile_frame" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_toRightOf="@+id/img_Post"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    style="@style/Text_black_16_Inter_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    tools:text="Every Interaction" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOccuation"
+                    style="@style/Text_black_16_Inter_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/clr_trolley_grey"
+                    android:textSize="@dimen/_9ssp"
+                    tools:text="Accountant Exculative,Client..." />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime"
+                    style="@style/Text_black_16_Inter_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/clr_trolley_grey"
+                    android:textSize="@dimen/_8ssp"
+                    tools:text="30 Mins" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMaincondit"
+                    style="@style/Text_black_16_Inter_Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textColor="@color/black"
+                    tools:text="sunt aut facere repellat provident occaecati excepturi optio reprehenderit" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

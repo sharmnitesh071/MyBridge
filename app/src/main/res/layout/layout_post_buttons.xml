@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgree"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:paddingHorizontal="3dp"
+        android:text="@string/agree"
+        android:textColor="@color/text_grey"
+        app:backgroundTint="@color/bg_button_select_deselect"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/btn_agree_select"
+        app:iconGravity="textStart"
+        app:iconPadding="4dp"
+        app:iconSize="25dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/btnDisagree"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@null" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDisagree"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:text="@string/disagree"
+        android:textColor="@color/text_grey"
+        app:backgroundTint="@color/bg_button_select_deselect"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/btn_disagree_select"
+        app:iconGravity="textStart"
+        app:iconPadding="4dp"
+        app:iconSize="25dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/btnComment"
+        app:layout_constraintStart_toEndOf="@+id/btnAgree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@null" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnComment"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="3dp"
+        android:text="@string/comment"
+        android:textColor="@color/text_grey"
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/ic_comment"
+        app:iconGravity="textStart"
+        app:iconPadding="4dp"
+        app:iconSize="25dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/btnShare"
+        app:layout_constraintStart_toEndOf="@+id/btnDisagree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@null" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShare"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:paddingHorizontal="3dp"
+        android:text="@string/share"
+        android:textColor="@color/text_grey"
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/ic_share"
+        app:iconGravity="textStart"
+        app:iconPadding="4dp"
+        app:iconSize="25dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnComment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@null" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/bg_round_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAgree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRSVP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/rsvp"
+        android:textColor="@color/dark_blue"
+        app:backgroundTint="@color/bg_round_grey"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tvRSVP"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

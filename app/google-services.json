@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "350980133077",
+    "project_id": "mybridge-1672819663673",
+    "storage_bucket": "mybridge-1672819663673.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350980133077:android:7561f90e115b84f3a9525c",
+        "android_client_info": {
+          "package_name": "com.databridge.mybridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350980133077-iqkg69j6bdnddfa9r860r3i6mqnrai9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.databridge.mybridge",
+            "certificate_hash": "bd2dd9c3ebfd8f7ad77ea9ca34b32fea6c22f684"
+          }
+        },
+        {
+          "client_id": "350980133077-ts3fs132lg1ie93sgi9akdi139vm9apk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.databridge.mybridge",
+            "certificate_hash": "fed7c37de93725787f09ec6ebc72c624f9089f8a"
+          }
+        },
+        {
+          "client_id": "350980133077-gv0qmihbnurrh4uskfro6om40k7cuor9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArP1v6-nNoEUGgayStihCfw481BkU5GWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350980133077-98856g3bj8s8iq3dtbmo9ji0qf2jd15k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "350980133077-801tolciebv4phu4bjutrl20ql0repoo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mybridgecorp.mybridge",
+                "app_store_id": "1663029173"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

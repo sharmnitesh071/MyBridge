@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:contentDescription="@null"
+        android:padding="5dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:src="@color/grey_very_light"
+        app:layout_constraintStart_toEndOf="@id/imgBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgEvents"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_round_blue"
+        android:contentDescription="@null"
+        android:padding="@dimen/_4sdp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+        app:layout_constraintEnd_toEndOf="@id/imgProfile"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tvEventTitle"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textColor="@color/text_grey"
+        app:layout_constraintEnd_toStartOf="@id/imgMoreInfo"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mobile " />
+
+    <TextView
+        android:id="@+id/tvProfileName"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_blue"
+        android:textSize="16sp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventTitle"
+        app:layout_constraintEnd_toStartOf="@id/imgMoreInfo"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        tools:text="Title Title " />
+
+    <TextView
+        android:id="@+id/tvDesignation"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textColor="@color/text_grey"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfileName"
+        app:layout_constraintEnd_toStartOf="@id/imgMoreInfo"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        tools:text="Mobile " />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textColor="@color/text_grey_light"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesignation"
+        app:layout_constraintEnd_toStartOf="@id/imgMoreInfo"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        tools:text="30 mins" />
+
+    <ImageView
+        android:id="@+id/imgMoreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:padding="3dp"
+        android:src="@drawable/ic_more_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

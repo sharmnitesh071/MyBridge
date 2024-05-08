@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".MyBridgeApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyBridge"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.createpost.CreatedPostActivity"
+            android:exported="true">
+         <!--   <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!--
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".ui.splash.view.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.App.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Trigger Google Play services to install the backported photo picker module. -->
+        <service
+            android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+            </intent-filter>
+
+            <meta-data
+                android:name="photopicker_activity:0:required"
+                android:value="" />
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.appintro.view.AppintroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.App.FullScreen" />
+        <activity
+            android:name=".ui.login.login.view.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.signup.view.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.previewsigninSignup.view.PreviewSignInSignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.forgotpass.view.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.setnewpass.view.SetNewPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.verifycode.view.VerifyCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboarding.view.OnboardingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboarding.view.SearchLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboarding.view.SearchCompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboarding.view.SearchCollageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboarding.view.ConfirmEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.onboarding.view.EditEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.profile.view.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.post.createpost.view.CreatePostActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

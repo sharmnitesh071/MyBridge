@@ -1,0 +1,311 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyBridge" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorPrimaryVariant">@color/colorAccent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:statusBarColor">@color/white</item>
+
+        <item name="android:colorAccent">@color/checked_color</item>
+        <item name="colorControlActivated">@color/checked_color</item>
+        <item name="buttonTint">@color/checked_color</item>
+        <item name="colorControlNormal">@color/unchecked_color</item>
+        <item name="android:textColorSecondary">@color/unchecked_color</item>
+    </style>
+
+    <style name="Theme.MyBridge" parent="Base.Theme.MyBridge" />
+
+    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowSplashScreenBackground">@color/bg_splash</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/app_icon</item>
+        <item name="windowSplashScreenAnimationDuration">0</item>
+        <item name="postSplashScreenTheme">@style/Theme.MaterialComponents.Light.NoActionBar</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/bg_splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.App.FullScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/bg_splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Text_White_16_Inter_Regular">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Text_White_16_Inter_Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_White_22_Inter_Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_grey_18_Inter_Bold">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Text_grey_18_Inter_Medium">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_grey_28_Inter_Bold">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Text_grey_28_Inter_Medium">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="signin_error_txt">
+        <item name="android:textColor">@color/error</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Text_blue_16_Inter_Medium">
+        <item name="android:textColor">@color/clr_txt_blue</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_blue_16_Inter_Bold">
+        <item name="android:textColor">@color/clr_txt_blue</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Topbar_title">
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Text_grey_16_Inter_Medium">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_grey_14_Inter_Medium">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_grey_12_Inter_Regular">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Text_blue_14_Inter_Medium">
+        <item name="android:textColor">@color/clr_txt_blue</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_grey_light_14_Inter_Medium">
+        <item name="android:textColor">@color/clr_txt_light</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+
+    <style name="Text_grey_light_14_Inter_Regular">
+        <item name="android:textColor">@color/clr_txt_light</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Text_grey_16_Inter_Bold">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Text_black_16_Inter_Regular">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Text_black_16_Inter_Medium">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_black_14_Inter_Medium">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="Text_grey_16_Inter_Regular">
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="edt_text_black_12_Inter">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+    </style>
+
+    <style name="spinner">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Text_blue_20_Inter_Bold">
+        <item name="android:textColor">@color/clr_btn</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Text_blue_40_Inter_Bold">
+        <item name="android:textColor">@color/clr_btn</item>
+        <item name="android:textSize">@dimen/_30ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Profile_about_title">
+        <item name="android:textColor">@color/clr_black_oak</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Profile_about_title2">
+        <item name="android:textColor">@color/clr_bank_vault</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="bottom_sheet_txt">
+        <item name="android:textColor">@color/clr_bank_vault</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="Profile_title_blue">
+        <item name="android:textColor">@color/clr_txt_blue</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <style name="Profile_title_blue_small">
+        <item name="android:textColor">@color/clr_txt_blue</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+
+    <style name="Profile_about_info">
+        <item name="android:textColor">@color/clr_trolley_grey</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="android:colorAccent">@color/checked_color</item>
+        <item name="colorControlActivated">@color/checked_color</item>
+        <item name="buttonTint">@color/checked_color</item>
+        <item name="colorAccent">@color/checked_color</item>
+        <item name="colorControlNormal">@color/unchecked_color</item>
+        <item name="android:textColorSecondary">@color/unchecked_color</item>
+    </style>
+
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:editTextColor">@color/clr_txt</item>
+        <item name="android:textColor">@color/clr_txt</item>
+        <item name="android:textColorHint">@color/clr_etxt_hint</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="BottomSheetDialogTransStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetTransperentBackground</item>
+    </style>
+
+    <style name="bottomSheetTransperentBackground" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/transparent</item>
+        <!--        <item name="android:background">@drawable/bg_black_top_rounded_15</item>-->
+    </style>
+
+    <style name="Circle_Shape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

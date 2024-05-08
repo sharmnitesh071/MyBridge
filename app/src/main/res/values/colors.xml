@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#3D5A80</color>
+
+    <color name="bg_splash">#003049</color>
+    <color name="clr_btn">#3D5A80</color>
+    <color name="clr_txt">#5B5B5B</color>
+    <color name="clr_txt_blue">#3D5A80</color>
+    <color name="ed_boarder">#DDDDDD</color>
+    <color name="btn_boarder">#E4E6EB</color>
+    <color name="ed_bg">#F8F8F8</color>
+    <color name="error">#E41C19</color>
+    <color name="error_txt">#E13E3E</color>
+    <color name="clr_timer">#898989</color>
+    <color name="clr_txt_light">#868585</color>
+    <color name="clr_etxt_hint">#868585</color>
+    <color name="clr_onboarding_step">#D9D9D9</color>
+    <color name="clr_black_oak">#4F4F4F</color>
+    <color name="bg_screen">#F8F8F8</color>
+    <color name="bg_profile_screen">#F6F7F9</color>
+    <color name="clr_bank_vault">#747474</color>
+    <color name="clr_trolley_grey">#828282</color>
+
+    <color name="checked_color">#003049</color>
+    <color name="unchecked_color">#5B5B5B</color>
+    <color name="track_color">#DDDDDD</color>
+    <color name="title_color">#333333</color>
+    <color name="divider_color">#E0E0E0</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="dark_blue">#003049</color>
+    <color name="grey_light">#9e9e9e</color>
+    <color name="grey_very_light">#BDBDBD</color>
+    <color name="bg_round_grey">#E4E6EB</color>
+    <color name="text_blue">#3D5A80</color>
+    <color name="text_grey">#5B5B5B</color>
+    <color name="text_grey_light">#747474</color>
+
+</resources>

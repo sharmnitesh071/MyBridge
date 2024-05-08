@@ -1,0 +1,511 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_screen"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/tvOnBoardingStep"
+                    layout="@layout/layout_onboarding_step" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:background="@drawable/bg_social_btn"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:id="@+id/llMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Text_blue_16_Inter_Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="@string/onboarding_2" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Text_grey_16_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:gravity="center"
+                            android:text="@string/most_recent_job_title_" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etJobTitle"
+                            style="@style/edt_text_black_12_Inter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/squere_edittext"
+                            android:hint="@string/type__"
+                            android:inputType="text" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvJobTitleError"
+                            style="@style/signin_error_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            tools:text="@string/please_enter_a_valid_e_mail"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Text_grey_16_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:gravity="center"
+                            android:text="@string/employment_type_" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spEmpType"
+                            style="@style/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/spinner_background"
+                            android:hint="@string/select_one"
+                            android:inputType="text"
+                            android:spinnerMode="dropdown" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvEmpError"
+                            style="@style/signin_error_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            tools:text="@string/please_enter_a_valid_e_mail"
+                            tools:visibility="visible" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Text_grey_16_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:gravity="center"
+                            android:text="@string/most_recent_company_" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/etCompany"
+                            style="@style/edt_text_black_12_Inter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/squere_edittext"
+                            android:hint="@string/company"
+                            android:inputType="text" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCompanyError"
+                            style="@style/signin_error_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            tools:text="@string/valid_company"
+                            tools:visibility="visible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llStudent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Text_blue_16_Inter_Bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="@string/onboarding_2_info" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Text_grey_14_Inter_Medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:gravity="center"
+                            android:text="@string/school_or_college_university_" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSchool"
+                            style="@style/edt_text_black_12_Inter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/squere_edittext"
+                            android:hint="@string/school_or_college_university"
+                            android:inputType="text" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSchoolError"
+                            style="@style/signin_error_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            tools:text="@string/please_enter_a_valid_e_mail"
+                            tools:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/Text_grey_14_Inter_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:gravity="center"
+                                    android:text="@string/start_year_" />
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spStartYear"
+                                    style="@style/spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:background="@drawable/spinner_background"
+                                    android:hint="@string/select_one"
+                                    android:inputType="text"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    style="@style/Text_grey_14_Inter_Medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="@string/end_year_or_expected_" />
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/spEndYear"
+                                    style="@style/spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:background="@drawable/spinner_background"
+                                    android:hint="@string/select_one"
+                                    android:inputType="text"
+                                    android:spinnerMode="dropdown" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvYearError"
+                            style="@style/signin_error_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            tools:text="@string/please_enter_a_valid_e_mail"
+                            tools:visibility="visible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/squere_edittext"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/Text_grey_16_Inter_Medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:gravity="center"
+                                android:text="@string/i_m_over_13"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/swover13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                app:trackTint="@color/ed_boarder"
+                                app:track="@drawable/switch_track"
+                                app:thumbTint="@color/colorAccent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                            <!--                            android:checked="false"-->
+                            <!--                            android:thumb="@drawable/switch_thumb"-->
+                            <!--                            app:track="@drawable/switch_track"-->
+                            <!--                            android:thumb="@drawable/thumb_selector"-->
+
+                            <!--                            <Switch-->
+                            <!--                                android:id="@+id/switchover13"-->
+                            <!--                                android:checked="true"-->
+                            <!--                                app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+                            <!--                                app:layout_constraintTop_toTopOf="parent"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content" />-->
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/Text_grey_16_Inter_Medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:gravity="center"
+                                android:text="@string/date_of_birth" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/Text_grey_14_Inter_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:gravity="center"
+                                        android:text="@string/month_" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spMonth"
+                                        style="@style/spinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:background="@drawable/spinner_background"
+                                        android:hint="@string/select_one"
+                                        android:inputType="text"
+                                        android:spinnerMode="dropdown" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/Text_grey_14_Inter_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="@string/day_" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spDay"
+                                        style="@style/spinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:background="@drawable/spinner_background"
+                                        android:hint="@string/select_one"
+                                        android:inputType="text"
+                                        android:spinnerMode="dropdown" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/Text_grey_14_Inter_Medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="start"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:ellipsize="end"
+                                        android:gravity="center"
+                                        android:maxLines="1"
+                                        android:text="@string/year_" />
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/spYear"
+                                        style="@style/spinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:background="@drawable/spinner_background"
+                                        android:hint="@string/select_one"
+                                        android:inputType="text"
+                                        android:spinnerMode="dropdown" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDaterror"
+                                style="@style/signin_error_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="start"
+                                android:visibility="gone"
+                                tools:text="@string/dob_error"
+                                tools:visibility="visible" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStudent"
+                        style="@style/Text_grey_16_Inter_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/i_m_not_a_student" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnNext"
+                        style="@style/Text_White_16_Inter_Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/bg_nxt_btn"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/next"
+                        android:textAlignment="center" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBack"
+                        style="@style/Text_grey_16_Inter_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_30sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_30sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@string/back" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/pbLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

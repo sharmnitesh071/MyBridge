@@ -1,0 +1,140 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_profile_screen">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/post_topbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgProfilePic"
+                        style="@style/Circle_Shape"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/profile_frame"
+                        app:layout_constraintStart_toStartOf="@+id/guideVerticalLeft"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvImageName"
+                        style="@style/Text_blue_16_Inter_Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@id/imgProfilePic"
+                        app:layout_constraintEnd_toEndOf="@id/imgProfilePic"
+                        app:layout_constraintStart_toStartOf="@id/imgProfilePic"
+                        app:layout_constraintTop_toTopOf="@id/imgProfilePic"
+                        tools:text="SG" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName"
+                        style="@style/Text_black_16_Inter_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                            app:layout_constraintStart_toEndOf="@id/imgProfilePic"
+                        app:layout_constraintTop_toTopOf="@id/imgProfilePic"
+                        tools:text="Every Interaction" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChooseAudien"
+                        style="@style/Text_grey_14_Inter_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/bg_round_gray_with_arrow"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="Everyone"
+                        android:textColor="@color/clr_trolley_grey"
+                        app:layout_constraintStart_toStartOf="@id/tvName"
+                        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChooseWhoReply"
+                        style="@style/Text_grey_14_Inter_Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/bg_round_gray_with_arrow"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="Everyone replay"
+                        android:textColor="@color/clr_trolley_grey"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvChooseAudien"
+                        app:layout_constraintStart_toEndOf="@id/tvChooseAudien"
+                        app:layout_constraintTop_toTopOf="@id/tvChooseAudien" />
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="0dp"
+                        android:background="@null"
+                        android:gravity="start"
+                        android:minHeight="@dimen/_90sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:hint="@string/what_s_in_you_mind"
+                        android:paddingTop="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+                        app:layout_constraintStart_toStartOf="@+id/guideVerticalLeft"
+                        app:layout_constraintTop_toBottomOf="@+id/tvChooseAudien" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideVerticalLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="@dimen/_15sdp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideVerticalRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="@dimen/_15sdp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/pbLoader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

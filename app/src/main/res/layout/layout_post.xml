@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/layout_header"
+        layout="@layout/layout_post_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/layout_description"
+        layout="@layout/layout_post_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header" />
+
+    <include
+        android:id="@+id/layout_image"
+        layout="@layout/layout_post_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/layout_description" />
+
+    <include
+        android:id="@+id/layout_count"
+        layout="@layout/layout_post_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideVerticalRight"
+        app:layout_constraintStart_toStartOf="@id/guideVerticalLeft"
+        app:layout_constraintTop_toBottomOf="@+id/layout_image" />
+
+    <include
+        android:id="@+id/layout_button"
+        layout="@layout/layout_post_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_count" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

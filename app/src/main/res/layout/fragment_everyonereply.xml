@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_9sdp"
+    tools:context=".ui.createpost.EveryonereplyFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ic_minus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_below="@+id/img_line"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="start"
+            android:paddingStart="@dimen/_3sdp"
+            android:text="@string/choose_audience"
+            android:textSize="@dimen/_14ssp"
+            tools:ignore="RtlSymmetry" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_chose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_reply"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="start"
+            android:paddingStart="@dimen/_3sdp"
+            android:text="@string/choose_audience_info"
+            android:textSize="@dimen/_10ssp"
+            tools:ignore="RtlSymmetry" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Camera"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_chose"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/everyone"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/everyone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Vedio"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Camera"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/my_circle"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/my_circle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_tag"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Vedio"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/followers"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/my_circle_followers" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

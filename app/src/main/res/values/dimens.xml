@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- left right padding for All Main screen-->
+    <dimen name="splash_icon_padding">@dimen/_100sdp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp55">55dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp5">5sp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp35">35dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="left_right_padding">@dimen/_15sdp</dimen>
+    <dimen name="icon_padding">@dimen/_5sdp</dimen>
+    <dimen name="right_r_padding">@dimen/_10sdp</dimen>
+
+
+
+    <!-- left right padding for All screen-->
+<!--    <dimen name="leftright_padding">@dimen/_6sdp</dimen>-->
+<!--    <dimen name="topbar_left_backicon_padding">@dimen/_8sdp</dimen>-->
+<!--    <dimen name="topbar_left_padding">@dimen/_11sdp</dimen>-->
+<!--    <dimen name="recycleview_left_padding">@dimen/_13sdp</dimen>-->
+<!--    <dimen name="topbar_right_padding">@dimen/leftright_padding</dimen>-->
+<!--    <dimen name="leftright_padding">@dimen/_16sdp</dimen>-->
+<!--    <dimen name="recycleview_item_leftright_padding">@dimen/_5sdp</dimen>-->
+<!--    <dimen name="recycleview_padding">@dimen/_6sdp</dimen>-->
+<!--    <dimen name="topbackbutton_padding">@dimen/_6sdp</dimen>-->
+<!--    <dimen name="icon_padding">@dimen/_5sdp</dimen>-->
+<!--    <dimen name="card_radius">@dimen/_10sdp</dimen>-->
+<!--    <dimen name="tensdp">@dimen/_10sdp</dimen>-->
+<!--    <dimen name="fivesdp">@dimen/_5sdp</dimen>-->
+<!--    <dimen name="eightsdp">@dimen/_8sdp</dimen>-->
+<!--    <dimen name="sevensdp">@dimen/_7sdp</dimen>-->
+
+<!--&lt;!&ndash;    padding for full screen&ndash;&gt;-->
+<!--&lt;!&ndash;    <dimen name="top_padding">?android:attr/actionBarSize</dimen>&ndash;&gt;-->
+<!--    <dimen name="top_padding">@dimen/_32sdp</dimen>-->
+<!--    <dimen name="bottom_padding">@dimen/_170sdp</dimen>-->
+<!--    <dimen name="top_header_hight">@dimen/_92sdp</dimen>-->
+<!--    <dimen name="top_header_margin">@dimen/_82sdp</dimen>-->
+<!--    <dimen name="sel_padding">@dimen/_8sdp</dimen>-->
+<!--    <dimen name="unsel_padding">@dimen/_2sdp</dimen>-->
+<!--    <dimen name="cardview_corner_radius">@dimen/_10sdp</dimen>-->
+
+
+
+
+</resources>

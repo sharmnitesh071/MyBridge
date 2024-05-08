@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_15sdp"
+    android:background="@color/white"
+    tools:context=".ui.createpost.CreatepostbottomFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_line"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_minus" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_gallery"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_below="@+id/img_line"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_gallery"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/photo" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Vedio"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_gallery"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/video"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/video" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_tag"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Vedio"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/tag_people"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/tag_people" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Feeling"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_tag"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/feeling"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/feeling_activity" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Gif"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Feeling"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/gif"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/gif" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Camera"
+            style="@style/Topbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_Gif"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableStart="@drawable/camra"
+            android:drawablePadding="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/camera" />
+    </RelativeLayout>
+
+</FrameLayout>
